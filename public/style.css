@@ -1,0 +1,65 @@
+/* Apply box-sizing to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Reset margins/padding and set base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Toolbar container */
+#toolbar {
+  height: 50px;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  justify-content: space-between;
+}
+
+/* Label spacing */
+#toolbar label {
+  margin-right: 5px;
+}
+
+/* Styling inputs inside toolbar */
+#toolbar input[type="range"],
+#toolbar input[type="color"] {
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+/* Clear button styling */
+#clearBtn {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Hover effect for clear button */
+#clearBtn:hover {
+  background-color: #c0392b;
+}
+
+/* Canvas styling */
+canvas {
+  position: absolute;
+  top: 50px; /* Push below toolbar */
+  left: 0;
+  background: #fff;
+  width: 100vw;
+  height: calc(100vh - 50px); /* Fill rest of screen */
+  display: block;
+  cursor: crosshair;
+}
